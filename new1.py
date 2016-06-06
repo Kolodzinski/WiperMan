@@ -1,16 +1,13 @@
 import random
-
-def fun():
-	W = [1,2,4,5,6]
-	N = []
-
-	w = '0123'
-	x=0
-	for i in w:
-		N[x] = i
-		x +=1
-		print(N)
-	print(W)
+n = 14
+def digital_root(n):
+	if n > 9:
+		d = 0
+		for i in str(n): d += int(i)
+		n = d
+		digital_root(n)
+	else:
+		return
 
 
-fun()
+digital_root(n)
